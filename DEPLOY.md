@@ -1,6 +1,6 @@
-# PWA 部署说明
+# PWA 部署说明 · v1.1.0
 
-这个包是纯静态 PWA，上传后即可访问和安装。压缩包内文件位于根目录，直接解压到站点根目录即可。
+这个包是纯静态 PWA，包含 5 本词书（5,335 个去重词条）。上传后即可访问和安装。压缩包内文件位于根目录，直接解压到站点根目录即可。
 
 ## 包内容
 
@@ -8,6 +8,7 @@
 index.html
 manifest.webmanifest
 sw.js
+version.json
 assets/
   index-*.css
   index-*.js
@@ -22,6 +23,12 @@ _headers
 vercel.json
 DEPLOY.md
 ```
+
+## 版本与更新检查
+
+- `version.json` 和 `index.html` 的 `<meta name="app-version">` 都写着当前版本。
+- App 内「我的 → 检查更新」会拉取 `https://muyangllai.github.io/MOMO/` 的版本标记；发现更高版本时打开在线最新版。
+- 以后发布新版本，请同时修改 `version.json` 的 `version` 与 `index.html` 的 `app-version`，并更新 `sw.js` 的缓存名（例如 `momo-word-v5`），避免旧壳缓存。
 
 ## 部署要求
 
@@ -78,7 +85,7 @@ server {
 包内已经附带 Netlify 的 `_headers` 和 Vercel 的 `vercel.json`：
 
 - `assets/*`：一年强缓存，文件名带哈希，可安全长期缓存
-- `sw.js`、`manifest.webmanifest`、`index.html`：不缓存，保证发布更新后能拿到新版本
+- `sw.js`、`manifest.webmanifest`、`version.json`、`index.html`：不缓存，保证发布更新后能拿到新版本
 - `icons/*`：一周缓存
 
 Service Worker 采用：
@@ -109,7 +116,7 @@ Service Worker 采用：
 - 或 PowerShell：
 
 ```powershell
-Unblock-File .\momo-word-pwa-v1.0.0.zip
+Unblock-File .\momo-word-pwa-v1.1.0.zip
 ```
 
 这不是文件损坏，也不影响部署。

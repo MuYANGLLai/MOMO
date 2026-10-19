@@ -1,8 +1,9 @@
-const CACHE = 'momo-word-v3';
+const CACHE = 'momo-word-v4';
 const CORE = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './version.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-192.png',

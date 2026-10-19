@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="墨墨背单词">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a9c74"/>
+      <stop offset="0.55" stop-color="#247a58"/>
+      <stop offset="1" stop-color="#154a36"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#g)"/>
+  <circle cx="430" cy="86" r="150" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="2"/>
+  <path d="M256 134C324 184 351 246 318 312C290 368 230 386 181 351C165 274 195 198 256 134Z" fill="#f7fcf9" fill-opacity="0.97"/>
+  <path d="M256 166C249 233 244 296 217 347" fill="none" stroke="#2f8f68" stroke-width="11" stroke-linecap="round"/>
+  <path d="M247 248C278 237 301 217 316 188" fill="none" stroke="#2f8f68" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+  <path d="M239 290C208 282 187 265 173 240" fill="none" stroke="#2f8f68" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+</svg>
